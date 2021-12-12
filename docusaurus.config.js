@@ -50,6 +50,10 @@ const config = {
                         label:    'GitHub',
                         position: 'right',
                     },
+                    {
+                        type: 'localeDropdown',
+                        position: 'left',
+                    },
                 ],
             },
             footer: {
@@ -76,6 +80,10 @@ const config = {
                  defaultMode: 'dark',
              },
         }),
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en', 'ru'],
+    },
 };
 
 module.exports = config;
