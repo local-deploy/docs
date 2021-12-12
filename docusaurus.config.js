@@ -22,9 +22,8 @@ const config = {
                 docs:  {
                     sidebarPath:   require.resolve('./sidebars.js'),
                     routeBasePath: '/',
-                    editUrl:       'https://github.com/varrcan/notes/edit/master/',
+                    editUrl:       'https://github.com/local-deploy/docs/edit/master/',
                     admonitions:   {},
-
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -37,13 +36,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                style: 'dark',
                 title: 'Deploy Local',
-                hideOnScroll: true,
-                logo:  {
-                    alt: 'dl',
-                    src: 'img/logo.svg',
-                },
                 items: [
                     {
                         type:     'doc',

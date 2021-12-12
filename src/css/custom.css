@@ -99,6 +99,9 @@
 
     /* Footer */
     --ifm-footer-background-color: var(--custom-background-color);
+    --ifm-footer-color: var(--custom-content-color) !important;
+    --ifm-footer-link-color: var(--custom-content-color) !important;
+    --ifm-footer-title-color: var(--custom-content-color) !important;
 
     /* Hero */
     --ifm-hero-background-color: var(--custom-background-color);
@@ -304,4 +307,8 @@
 .admonition-note .admonition-icon svg {
     stroke: #f1c40f;
     fill: #f1c40f;
+}
+
+.footer {
+    color: var(--ifm-color-gray-200);
 }
