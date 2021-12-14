@@ -13,6 +13,7 @@ const config = {
     favicon:               'img/favicon.ico',
     organizationName:      'local-deploy',
     projectName:           'dl',
+    trailingSlash: false,
 
     presets: [
         [
@@ -83,6 +84,15 @@ const config = {
         defaultLocale: 'en',
         locales: ['en', 'ru'],
     },
+    plugins: [
+        [
+            '@docusaurus/plugin-sitemap',
+            {
+                changefreq: 'weekly',
+                priority: 0.5,
+            },
+        ],
+    ],
 };
 
 module.exports = config;
