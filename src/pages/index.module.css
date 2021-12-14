@@ -1,23 +1,92 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
+.features {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.main-wrapper {
+  flex: 1 0 auto;
+}
+
+.hero {
+  background-color: #2b3137;
+  padding: 48px;
+}
+
+.heroInner {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.heroProjectTagline {
+  color: #fff;
+  font-size: 50px;
+  margin: 0;
+}
+
+.heroLogo {
+  animation-duration: 2s;
+  animation-name: a;
+  float: right;
+  margin-top: 20px;
+  max-width: 27%;
+  padding: 0 20px 20px;
+}
+
+.heroTitleTextHtml b {
+  color: var(--ifm-color-primary);
+}
+
+.indexCtas {
+  align-items: center;
+  display: flex;
+  margin-top: 24px;
+}
+
+.indexCtasGetStartedButton, .indexTryMeButton {
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2em;
+  padding: 18px 45px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+.indexCtasGetStartedButton {
+  transition: background .3s,color .3s;
+}
+
+.indexTryMeButton {
+  margin-left: 1rem !important;
+  background-color: var(--ifm-color-primary);
+  transition: .3s;
+}
+
+.announcementDark {
+  background-color: #20232a;
+  color: #fff;
+}
+
+.announcement {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 48px;
+  text-align: center;
+}
+
+.announcementInner {
+  margin: 0 auto;
+  max-width: 768px;
 }
