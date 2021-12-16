@@ -4,20 +4,18 @@
     /*
       Customisation here for both Light and Dark themes
     */
-    --custom-font-base: 'Inter', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial',
-    sans-serif;
-    --custom-font-code: 'Source Code Pro', Menlo, monospace;
+    --custom-font-base: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --custom-font-code: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --custom-font-size-base: 1rem;
     --custom-border-radius: 3px;
     --custom-border-radius-md: 6px;
-    --custom-primary-darkest: #10633e;
-    --custom-primary-darker: #1c8656;
-    --custom-primary-dark: #38bc81;
-    --custom-primary: #24b47e;
-    --custom-primary-light: #65d9a5;
-    --custom-primary-lighter: #9fe7c7;
-    --custom-primary-lightest: #c5f1dd;
+    --custom-primary: #00a4b8;
+    --custom-primary-dark: #0094a6;
+    --custom-primary-darker: #008b9c;
+    --custom-primary-darkest: #007381;
+    --custom-primary-light: #00b4ca;
+    --custom-primary-lighter: #00bdd4;
+    --custom-primary-lightest: #00d5ef;
     --custom-background-color: #1f1f1f;
     --custom-background-color-highlight: #fff;
     --custom-background-color-diff: #f5f6f7;
@@ -138,13 +136,13 @@
 }
 
 :root[data-theme='dark'] {
-    --custom-primary-darkest: #10633e;
-    --custom-primary-darker: #1c8656;
-    --custom-primary-dark: #38bc81;
-    --custom-primary: #3ecf8e;
-    --custom-primary-light: #65d9a5;
-    --custom-primary-lighter: #9fe7c7;
-    --custom-primary-lightest: #c5f1dd;
+    --custom-primary: #00a4b8;
+    --custom-primary-dark: #0094a6;
+    --custom-primary-darker: #008b9c;
+    --custom-primary-darkest: #007381;
+    --custom-primary-light: #00b4ca;
+    --custom-primary-lighter: #00bdd4;
+    --custom-primary-lightest: #00d5ef;
     --custom-color-subtle: #484848;
 
     --custom-background-color: #1f1f1f;

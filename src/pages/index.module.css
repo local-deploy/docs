@@ -44,6 +44,10 @@
   color: var(--ifm-color-primary);
 }
 
+.heroTextHtml {
+  color: var(--ifm-color-gray-200);
+}
+
 .indexCtas {
   align-items: center;
   display: flex;
