@@ -6,32 +6,56 @@ import styles from './index.module.css';
 
 const FeatureList = [
     {
-        title:       'Easy to Use',
+        title:       'Easy to use',
         Svg:         require('../../static/img/logo.svg').default,
         description: (
                          <>
-                             Docusaurus was designed from the ground up to be easily installed and
-                             used to get your website up and running quickly.
+                             .
                          </>
                      ),
     },
     {
-        title:       'Focus on What Matters',
+        title:       'Easy to customize',
         Svg:         require('../../static/img/logo.svg').default,
         description: (
                          <>
-                             Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-                             ahead and move your docs into the <code>docs</code> directory.
+                             .
                          </>
                      ),
     },
     {
-        title:       'Powered by React',
+        title:       'Multiplatform',
         Svg:         require('../../static/img/logo.svg').default,
         description: (
                          <>
-                             Extend or customize your website layout by reusing React. Docusaurus can
-                             be extended while reusing the same header and footer.
+                             .
+                         </>
+                     ),
+    },
+    {
+        title:       'Flexible balancer',
+        Svg:         require('../../static/img/logo.svg').default,
+        description: (
+                         <>
+                             .
+                         </>
+                     ),
+    },
+    {
+        title:       'Catching mail',
+        Svg:         require('../../static/img/logo.svg').default,
+        description: (
+                         <>
+                             .
+                         </>
+                     ),
+    },
+    {
+        title:       'Only Docker required',
+        Svg:         require('../../static/img/logo.svg').default,
+        description: (
+                         <>
+                             .
                          </>
                      ),
     },
@@ -44,10 +68,14 @@ function HomepageHeader() {
             {/*<div className="container">*/}
             {/*    <h1 className="hero__title">{siteConfig.title}</h1>*/}
             <div className={styles.heroInner}>
-                <h2 className={styles.heroProjectTagline}>
-                <img alt="DL" className={styles.heroLogo} src="img/logo.svg"/>
-                <span className={styles.heroTitleTextHtml}>Site deployment assistant <b>locally</b></span>
-            </h2>
+                <h1 className={styles.heroProjectTagline}>
+                    {/*<img alt="DL" className={styles.heroLogo} src="img/logo.svg"/>*/}
+                    <div className={styles.heroTitleTextHtml}><b>DL</b></div>
+                </h1>
+                <h2 className={styles.heroTextHtml}>Site deployment assistant locally</h2>
+                <p className={styles.heroTextHtml}>DL provides a Docker powered local development experience for your project that is compatible with macOS, Windows (WSL2),
+                    and Linux. Other than Docker (docker-compose) no software or libraries are required to be installed on your local computer before using DL. </p>
+                <p className={styles.heroTextHtml}>DL's simple CLI means you can start building your application without any previous Docker experience.</p>
                 <div className={styles.indexCtas}>
                     <a className={styles.indexCtasGetStartedButton} href="intro">Start using DL</a>
                     {/*<a href="intro" className={styles.indexTryMeButton}>Try a Demo</a>*/}
