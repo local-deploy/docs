@@ -197,5 +197,58 @@
   },
   "Site deployment assistant locally": {
     "message": "Локальное развертывание сайта"
+  },
+  "Easy to use": {
+    "message": "Легко использовать",
+    "description": "Easy to use"
+  },
+  "Easy to customize": {
+    "message": "Легко настроить",
+    "description": "Easy to customize"
+  },
+  "DL can be easily installed and used to quickly launch website on your local computer": {
+    "message": "DL легко установить и использовать для быстрого запуска веб-сайта на вашем локальном компьютере"
+  },
+  "You can customize or completely replace the containers being launched for your application": {
+    "message": "Вы можете кастомизировать или вовсе заменить запускаемые контейнеры для вашего приложения"
+  },
+  "Multiplatform": {
+    "message": "Мультиплатформенность",
+    "description": "Multiplatform"
+  },
+  "You can run the project locally on Linux, macOS or Windows (via WSL2)": {
+    "message": "Запустить проект локально можно на платформе Linux, MacOS или Windows (через WSL2)"
+  },
+  "Flexible balancer": {
+    "message": "Гибкий балансировщик",
+    "description": "Flexible balancer"
+  },
+  "DL uses Traffic as a reverse proxy server. It allows flexible interaction with docker containers": {
+    "message": "DL использует Traefik в качестве обратного прокси-сервера. Он позволяет гибко взаимодействовать с docker контейнерами"
+  },
+  "Catching mail": {
+    "message": "Перехват почты",
+    "description": "Catching mail"
+  },
+  "Emails sent from your site will be intercepted by the Mail Hog application": {
+    "message": "Отправленные с вашего сайта письма будут перехвачены приложением MailHog"
+  },
+  "Only Docker required": {
+    "message": "Требуется только Docker",
+    "description": "Only Docker required"
+  },
+  "There is no need to install additional software on your computer, except Docker (docker-compose)": {
+    "message": "На компьютере не требуется устанавливать дополнительное программное обеспечение, кроме Docker (docker-compose)"
+  },
+  "heroText1": {
+    "message": "DL обеспечивает локальную разработку вашего проекта с использованием Docker, он совместим с MacOS, Windows (WSL2) и Linux. За исключением Docker (docker-compose), на локальном компьютере не требуется устанавливать дополнительное программное обеспечение или библиотеки.",
+    "description": "heroText1"
+  },
+  "heroText2": {
+    "message": "При помощи простого интерфейса командной строки вы можете развернуть свое приложение без какого-либо опыта работы с Docker.",
+    "description": "heroText2"
+  },
+  "Start using DL": {
+    "message": "Начать использовать DL"
   }
 }

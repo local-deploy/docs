@@ -3,60 +3,62 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
+import Translate, {translate} from '@docusaurus/Translate';
+import Link from "@docusaurus/Link";
 
 const FeatureList = [
     {
-        title:       'Easy to use',
-        Svg:         require('../../static/img/logo.svg').default,
+        title:       translate({message: 'Easy to use', description: 'Easy to use'}),
+        Svg:         require('../../static/img/features/use.svg').default,
         description: (
-                         <>
-                             .
-                         </>
+                         <Translate>
+                             DL can be easily installed and used to quickly launch website on your local computer
+                         </Translate>
                      ),
     },
     {
-        title:       'Easy to customize',
-        Svg:         require('../../static/img/logo.svg').default,
+        title:       translate({message: 'Easy to customize', description: 'Easy to customize'}),
+        Svg:         require('../../static/img/features/custom.svg').default,
         description: (
-                         <>
-                             .
-                         </>
+                         <Translate>
+                             You can customize or completely replace the containers being launched for your application
+                         </Translate>
                      ),
     },
     {
-        title:       'Multiplatform',
-        Svg:         require('../../static/img/logo.svg').default,
+        title:       translate({message: 'Multiplatform', description: 'Multiplatform'}),
+        Svg:         require('../../static/img/features/multi.svg').default,
         description: (
-                         <>
-                             .
-                         </>
+                         <Translate>
+                             You can run the project locally on Linux, macOS or Windows (via WSL2)
+                         </Translate>
                      ),
     },
     {
-        title:       'Flexible balancer',
-        Svg:         require('../../static/img/logo.svg').default,
+        title:       translate({message: 'Flexible balancer', description: 'Flexible balancer'}),
+        Svg:         require('../../static/img/features/balancer.svg').default,
         description: (
-                         <>
-                             .
-                         </>
+                         <Translate>
+                             DL uses Traffic as a reverse proxy server. It allows flexible interaction with docker containers
+                         </Translate>
                      ),
     },
     {
-        title:       'Catching mail',
-        Svg:         require('../../static/img/logo.svg').default,
+        title:       translate({message: 'Catching mail', description: 'Catching mail'}),
+        Svg:         require('../../static/img/features/mail.svg').default,
         description: (
-                         <>
-                             .
-                         </>
+                         <Translate>
+                             Emails sent from your site will be intercepted by the Mail Hog application
+                         </Translate>
                      ),
     },
     {
-        title:       'Only Docker required',
-        Svg:         require('../../static/img/logo.svg').default,
+        title:       translate({message: 'Only Docker required', description: 'Only Docker required'}),
+        Svg:         require('../../static/img/features/docker.svg').default,
         description: (
-                         <>
-                             .
-                         </>
+                         <Translate>
+                             There is no need to install additional software on your computer, except Docker (docker-compose)
+                         </Translate>
                      ),
     },
 ];
@@ -65,31 +67,26 @@ function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     return (
         <div className={clsx(styles.hero)}>
-            {/*<div className="container">*/}
-            {/*    <h1 className="hero__title">{siteConfig.title}</h1>*/}
             <div className={styles.heroInner}>
-                <h1 className={styles.heroProjectTagline}>
-                    {/*<img alt="DL" className={styles.heroLogo} src="img/logo.svg"/>*/}
-                    <div className={styles.heroTitleTextHtml}><b>DL</b></div>
+                <h1 className={clsx(styles.heroProjectTagline, styles.heroTitleTextHtml)}>
+                    <b>Deploy Local</b>
                 </h1>
-                <h2 className={styles.heroTextHtml}>Site deployment assistant locally</h2>
-                <p className={styles.heroTextHtml}>DL provides a Docker powered local development experience for your project that is compatible with macOS, Windows (WSL2),
-                    and Linux. Other than Docker (docker-compose) no software or libraries are required to be installed on your local computer before using DL. </p>
-                <p className={styles.heroTextHtml}>DL's simple CLI means you can start building your application without any previous Docker experience.</p>
+                <h2 className={styles.heroTextHtml}><Translate>Site deployment assistant locally</Translate></h2>
+                <p className={styles.heroTextHtml}>
+                    <Translate id="heroText1" description="heroText1">
+                        DL provides a Docker powered local development experience for your project that is compatible with macOS, Windows (WSL2), and Linux. Other than Docker (docker-compose) no software or libraries are required to be installed on your local computer before using DL.
+                    </Translate>
+                </p>
+                <p className={styles.heroTextHtml}>
+                    <Translate id="heroText2" description="heroText2">
+                        DL's simple CLI means you can start building your application without any previous Docker experience.
+                    </Translate>
+                    </p>
                 <div className={styles.indexCtas}>
-                    <a className={styles.indexCtasGetStartedButton} href="intro">Start using DL</a>
+                    <a className={styles.indexCtasGetStartedButton} href="intro"><Translate>Start using DL</Translate></a>
                     {/*<a href="intro" className={styles.indexTryMeButton}>Try a Demo</a>*/}
                 </div>
             </div>
-            {/*<p className="hero__subtitle"><Translate>Site deployment assistant locally</Translate></p>*/}
-            {/*<div className={styles.buttons}>*/}
-            {/*    <Link*/}
-            {/*        className="button button--secondary button--lg"*/}
-            {/*        to="/docs/intro">*/}
-            {/*        Docusaurus Tutorial - 5min ⏱️*/}
-            {/*    </Link>*/}
-            {/*</div>*/}
-            {/*</div>*/}
         </div>
     );
 }
