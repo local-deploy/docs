@@ -4,32 +4,53 @@ sidebar_position: 1
 
 # Введение
 
-Let's discover **Docusaurus in less than 10 minutes**.
+Deploy Local — это интерфейс командной строки, разработанный для того, чтобы помочь разработчикам быстро разворачивать проекты на локальном компьютере.
 
-## Getting Started
+DL является оберткой поверх Docker и docker-compose, никакое дополнительное программное обеспечение или библиотеки устанавливать не требуется.
 
-Get started by **creating a new site**.
+Поддерживаемые ОС:
+- Linux (debian, ubuntu, linux mint, etc)
+- macOS
+- Windows (через WSL2)  
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Поддерживаемые фреймворки и CMS:
+- Bitrix
+- Laravel
+- WordPress  
 
-## Generate a new site
+Зависимости:
+- docker
+- docker-compose
 
-Generate a new Docusaurus site using the **classic template**:
+## Особенности
+- Поддержка версий PHP (apache и php-fpm) 7.3, 7.4, 8.0
+- Поддержка MySQL версий 5.7, 8.0
+- Скачивание базы данных и файлов с production-сервера
+- Redis
+- Memcached
+- Nginx
+- Кроссплатформенность
+- Перехват почты, отправленной через php
+- Система управления docker-контейнерами Portainer
+- Не требует root доступ
+- Доступ к сайтам из браузера через `*.localhost` или `*.nip.io`
 
-```shell
-npm init docusaurus@latest my-website classic
-```
+## Как это работает?
+После установки утилиты, на вашем компьютере будут запущены 3 сервисных docker-контейнера: 
+- Traefik (прокси-сервер для взаимодействия с установленными проектами)
+- Mailhog (легковесная служба для перехвата email, отправленных с локального сайта)
+- и Portainer (веб-интерфейс для работы с Docker)
 
-## Start your site
+Сайты, которые вы запускаете через DL, находятся в своей собственной виртуальной сети, вы можете одновременно запустить несколько проектов, у каждого сформируется свой URL.  
+При запуске проекта весь исходный код (в директории, где запущен DL) монтируется в docker-контейнер, что позволяет редактировать код и сразу тестировать функционал в браузере.
 
-Run the development server:
+С помощью переменных в `.env` файле вы можете установить необходимые настройки, которые требуются для конкретного проекта, а также полностью переопределить запускаемые образы на свои. Для удобства запуска (и модификации) используется файл `docker-compose.yaml`.
+## Лицензирование
+Весь исходный код распространяется в соответствии с лицензией [MIT](https://github.com/local-deploy/dl/blob/master/LICENSE).
 
-```shell
-cd my-website
+## Содействие
 
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+Пожалуйста, убедитесь, что при отправке запроса на слияние выполнено следующее:
+- Сделайте форк репозитория и создайте свою ветвь от master.  
+- Обязательно протестируйте свои изменения!  
+- Убедитесь, что ваш код соответствует общепринятым стандартам.

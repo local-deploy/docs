@@ -213,7 +213,7 @@
     "message": "Вы можете кастомизировать или вовсе заменить запускаемые контейнеры для вашего приложения"
   },
   "Multiplatform": {
-    "message": "Мультиплатформенность",
+    "message": "Кроссплатформенность",
     "description": "Multiplatform"
   },
   "You can run the project locally on Linux, macOS or Windows (via WSL2)": {

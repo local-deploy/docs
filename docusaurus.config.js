@@ -90,6 +90,15 @@ const config = {
             {
                 changefreq: 'weekly',
                 priority: 0.5,
+                id: 'en'
+            },
+        ],
+        [
+            '@docusaurus/plugin-sitemap',
+            {
+                changefreq: 'weekly',
+                priority: 0.5,
+                id: 'ru'
             },
         ],
     ],
