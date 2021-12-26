@@ -10,8 +10,8 @@ DL is a wrapper on top of Docker and docker-compose, no additional software or l
 
 Supported OS:
 - Linux (debian, ubuntu, linux mint, etc)
-- macOS
-- Windows (via WSL2)
+[//]: # (- macOS)
+[//]: # (- Windows &#40;via WSL2&#41;)
 
 Supported frameworks and CMS:
 - Bitrix
@@ -29,7 +29,7 @@ Dependencies:
 - Redis
 - Memcached
 - Nginx
-- Cross-platform
+[//]: # (- Cross-platform)
 - Interception of mail sent via php
 - Portainer - docker container management system
 - Does not require root access

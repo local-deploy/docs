@@ -10,8 +10,8 @@ DL является оберткой поверх Docker и docker-compose, ни
 
 Поддерживаемые ОС:
 - Linux (debian, ubuntu, linux mint, etc)
-- macOS
-- Windows (через WSL2)  
+[//]: # (- macOS)
+[//]: # (- Windows &#40;через WSL2&#41;  )
 
 Поддерживаемые фреймворки и CMS:
 - Bitrix
@@ -29,7 +29,7 @@ DL является оберткой поверх Docker и docker-compose, ни
 - Redis
 - Memcached
 - Nginx
-- Кроссплатформенность
+[//]: # (- Кроссплатформенность)
 - Перехват почты, отправленной через php
 - Система управления docker-контейнерами Portainer
 - Не требует root доступ
