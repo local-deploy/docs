@@ -10,7 +10,7 @@ The installation process is reduced to copying the executable file to the `bin` 
 
 To install DL, just paste the code into a terminal and run:
 ```bash
-wget https://raw.githubusercontent.com/local-deploy/dl/master/install_dl.sh && chmod +x ./install_dl.sh && ./install_dl.sh
+curl -s https://raw.githubusercontent.com/local-deploy/dl/master/install_dl.sh | bash
 ```
 
 The script will check the dependencies, download and install the latest release.

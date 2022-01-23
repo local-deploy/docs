@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Чтобы установить DL, просто вставьте код в терминал и запустите:
 ```bash
-wget https://raw.githubusercontent.com/local-deploy/dl/master/install_dl.sh && chmod +x ./install_dl.sh && ./install_dl.sh
+curl -s https://raw.githubusercontent.com/local-deploy/dl/master/install_dl.sh | bash
 ```
 
 Скрипт проверит зависимости, скачает и установит последний релиз.
