@@ -4,12 +4,15 @@ on:
   push:
     branches: [master]
 
+  workflow_dispatch:
+
 jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out repo
+        uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
@@ -20,9 +23,8 @@ jobs:
           yarn install --frozen-lockfile
           yarn build
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
-          user_name: github-actions[bot]
-          user_email: dl@varme.pw
+          target_branch: gh-pages
+          build_dir: website/build
