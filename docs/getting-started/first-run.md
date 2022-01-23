@@ -46,5 +46,5 @@ All DL commands must be run in the root directory of the project, which contains
 After starting the project, local links will be displayed. You can use the .localhost domain or access the site through the nip.io service — this is convenient if you work in a corporate local network, then colleagues can go to your site from their computer.
 
 
-[^1]: [Конфигурация через .env файл ](env)  
-[^2]: [Доступные команды ](../commands)
+[^1]: [Configuration via .env file ](env)  
+[^2]: [Available commands ](../commands)
