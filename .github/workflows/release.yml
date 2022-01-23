@@ -26,5 +26,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          user_name: github-actions[bot]
+          external_repository: local-deploy/local-deploy.github.io
+          publish_branch: master
+          user_name: github-actions
           user_email: dl@varme.pw
