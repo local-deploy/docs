@@ -12,8 +12,9 @@ const config = {
     onBrokenMarkdownLinks: 'warn',
     favicon:               'img/favicon.ico',
     organizationName:      'local-deploy',
-    projectName:           'dl',
-    trailingSlash: false,
+    projectName:           'local-deploy.github.io',
+    deploymentBranch:      'master',
+    trailingSlash:         false,
 
     presets: [
         [
@@ -35,70 +36,70 @@ const config = {
 
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-        ({
-            navbar: {
-                title: 'Deploy Local',
-                items: [
-                    {
-                        type:     'doc',
-                        docId:    'intro',
-                        position: 'left',
-                        label:    'Docs',
-                    },
-                    {
-                        href:     'https://github.com/local-deploy/dl',
-                        label:    'GitHub',
-                        position: 'right',
-                    },
-                    {
-                        type: 'localeDropdown',
-                        position: 'left',
-                    },
-                ],
-            },
-            footer: {
-                style:     'dark',
-                // links:     [
-                //     {
-                //         title: '',
-                //         items: [
-                //             {
-                //                 label: '',
-                //                 to:    '',
-                //             },
-                //         ],
-                //     }
-                // ],
-                copyright: `Copyright © ${new Date().getFullYear()} Varrcan`,
-            },
-            prism:  {
-                theme:     lightCodeTheme,
-                darkTheme: darkCodeTheme,
-                additionalLanguages: ['apacheconf', 'docker', 'editorconfig', 'php', 'nginx', 'regex'],
-            },
-             colorMode: {
-                 defaultMode: 'dark',
-             },
-        }),
-    i18n: {
+             ({
+                 navbar:    {
+                     title: 'Deploy Local',
+                     items: [
+                         {
+                             type:     'doc',
+                             docId:    'intro',
+                             position: 'left',
+                             label:    'Docs',
+                         },
+                         {
+                             href:     'https://github.com/local-deploy/dl',
+                             label:    'GitHub',
+                             position: 'right',
+                         },
+                         {
+                             type:     'localeDropdown',
+                             position: 'left',
+                         },
+                     ],
+                 },
+                 footer:    {
+                     style: 'dark',
+                     // links:     [
+                     //     {
+                     //         title: '',
+                     //         items: [
+                     //             {
+                     //                 label: '',
+                     //                 to:    '',
+                     //             },
+                     //         ],
+                     //     }
+                     // ],
+                     copyright: `Copyright © ${new Date().getFullYear()} Varrcan`,
+                 },
+                 prism:     {
+                     theme:               lightCodeTheme,
+                     darkTheme:           darkCodeTheme,
+                     additionalLanguages: ['apacheconf', 'docker', 'editorconfig', 'php', 'nginx', 'regex'],
+                 },
+                 colorMode: {
+                     defaultMode: 'dark',
+                 },
+             }),
+    i18n:    {
         defaultLocale: 'en',
-        locales: ['en', 'ru'],
+        locales:       ['en', 'ru'],
     },
     plugins: [
         [
             '@docusaurus/plugin-sitemap',
             {
                 changefreq: 'weekly',
-                priority: 0.5,
-                id: 'en'
+                priority:   0.5,
+                id:         'en',
             },
         ],
         [
             '@docusaurus/plugin-sitemap',
             {
                 changefreq: 'weekly',
-                priority: 0.5,
-                id: 'ru'
+                priority:   0.5,
+                id:         'ru',
             },
         ],
     ],
