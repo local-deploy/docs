@@ -127,8 +127,8 @@
 }
 
 :root {
-    --ifm-container-width: 1366px;
-    --doc-sidebar-width: 360px !important;
+    --ifm-container-width: 1920px !important;
+    /*--doc-sidebar-width: 360px !important;*/
 }
 
 :root[data-theme='light'] {
@@ -305,6 +305,13 @@
 .admonition-note .admonition-icon svg {
     stroke: #f1c40f;
     fill: #f1c40f;
+}
+
+@media (min-width: 997px) {
+    .container {
+        margin-left: 1em;
+        max-width: var(--ifm-container-width);
+    }
 }
 
 .footer {
