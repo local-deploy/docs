@@ -39,6 +39,18 @@ With the help of variables in the `.env` file, you can flexibly control the envi
 | EXCLUDED_TABLES         | No       |                                                | MySQL tables excluded when downloading a dump from the server                                                |
 | EXCLUDED_FILES          | No       |                                                | Excluded files when downloading an archive of files from the server                                          |
 
+### Database connection
+
+If the script could not automatically determine access to the database on the server, write the settings to the env file manually
+
+| Variable           | Required  | Default value    | Note           |
+|--------------------|-----------|------------------|----------------|
+| MYSQL_HOST_SRV     | Нет       | localhost        | Host           |
+| MYSQL_PORT_SRV     | Нет       | 3306             | Port           |
+| MYSQL_DATABASE_SRV | Да        |                  | Base name      |
+| MYSQL_LOGIN_SRV    | Да        |                  | User name      |
+| MYSQL_PASSWORD_SRV | Да        |                  | User password  |
+
 ### PHP settings
 
 | Variable                | Required | Default value                                  | Note                                                                                                         |
@@ -63,13 +75,12 @@ With the help of variables in the `.env` file, you can flexibly control the envi
 | MYSQL_PASSWORD          | No       | db                                             | MySQL database user password                                                                                 |
 | MYSQL_ROOT_PASSWORD     | No       | root                                           | MySQL database root password                                                                                 |
 
-### Enabling additional containers
+### Additional containers
 
 | Variable                | Required | Default value                                  | Note                                                                                                         |
 |-------------------------|----------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | REDIS                   | No       | false                                          | If set to `true`, the Redis container will be launched                                                       |
 | REDIS_PASSWORD          | No       | pass                                           | Redis password                                                                                               |
-|                         |          |                                                |                                                                                                              |
 | MEMCACHED               | No       | false                                          | If set to `true`, the Memcached container will be launched                                                   |
 
 ### Other settings
