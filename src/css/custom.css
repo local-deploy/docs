@@ -128,6 +128,8 @@
 
 :root {
     --ifm-container-width: 1920px !important;
+    --ifm-container-width-xl: 1420px !important;
+    --ifm-table-cell-padding: 0.5em !important;
     /*--doc-sidebar-width: 360px !important;*/
 }
 
@@ -311,6 +313,12 @@
     .container {
         /*margin-left: 1em;*/
         max-width: var(--ifm-container-width);
+    }
+}
+
+@media (min-width:1440px) {
+    .container {
+        max-width:var(--ifm-container-width-xl);
     }
 }
 
