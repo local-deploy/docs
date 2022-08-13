@@ -13,7 +13,7 @@ Used images:
 - [MySQL](https://hub.docker.com/r/alterway/mysql) (alterway/mysql)
 - [Memcached](https://hub.docker.com/_/memcached)
 - [Nginx](https://hub.docker.com/_/nginx) (alpine version)
-- [php-fpm and apache2](https://quay.io/organization/local-deploy) (modified original images)
+- [php-fpm and apache2](https://ghcr.io/organization/local-deploy) (modified original images)
 
 ## Setting up the .env file
 
