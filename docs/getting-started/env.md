@@ -53,17 +53,17 @@ If the script could not automatically determine access to the database on the se
 
 ### PHP settings
 
-| Variable                | Required | Default value                                  | Note                                                                                                         |
-|-------------------------|----------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| PHP_VERSION             | Yes      |                                                | PHP version <br/>Available values: `7.3-apache`, `7.4-apache`, `8.0-apache`, `7.3-fpm`, `7.4-fpm`, `8.0-fpm` |
-| PHP_MEMORY_LIMIT        | No       | 256M                                           | PHP memory limit                                                                                             |
-| PHP_POST_MAX_SIZE       | No       | 100M                                           | Maximum POST request size                                                                                    |
-| PHP_UPLOAD_MAX_FILESIZE | No       | 100M                                           | Maximum file size allowed for upload                                                                         |
-| PHP_MAX_FILE_UPLOADS    | No       | 50                                             | Maximum number of uploaded files                                                                             |
-| PHP_MAX_EXECUTION_TIME  | No       | 60                                             | Maximum script execution time                                                                                |
-| XDEBUG                  | No       | off [^4]                                       | To enable the XDebug module, use the `debug` option                                                          |
-| XDEBUG_IDE_KEY          | No       | PHPSTORM                                       | Key to be passed when initializing an XDebug session                                                         |
-| XDEBUG_PORT             | No       | 9003                                           | XDebug port                                                                                                  |
+| Variable                | Required | Default value                                  | Note                                                                                                                                  |
+|-------------------------|----------|------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| PHP_VERSION             | Yes      |                                                | PHP version <br/>Available values: `7.3-apache`, `7.4-apache`, `8.0-apache`, `8.1-apache`, `7.3-fpm`, `7.4-fpm`, `8.0-fpm`, `8.1-fpm` |
+| PHP_MEMORY_LIMIT        | No       | 256M                                           | PHP memory limit                                                                                                                      |
+| PHP_POST_MAX_SIZE       | No       | 100M                                           | Maximum POST request size                                                                                                             |
+| PHP_UPLOAD_MAX_FILESIZE | No       | 100M                                           | Maximum file size allowed for upload                                                                                                  |
+| PHP_MAX_FILE_UPLOADS    | No       | 50                                             | Maximum number of uploaded files                                                                                                      |
+| PHP_MAX_EXECUTION_TIME  | No       | 60                                             | Maximum script execution time                                                                                                         |
+| XDEBUG                  | No       | off [^4]                                       | To enable the XDebug module, use the `debug` option                                                                                   |
+| XDEBUG_IDE_KEY          | No       | PHPSTORM                                       | Key to be passed when initializing an XDebug session                                                                                  |
+| XDEBUG_PORT             | No       | 9003                                           | XDebug port                                                                                                                           |
 
 ### MySQL settings
 
