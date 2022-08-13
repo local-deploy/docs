@@ -18,6 +18,11 @@ The command will check that docker is installed correctly and launch the portain
 DL uses ports 8080, 80 and 443 by default. These should be available on your system.
 :::
 
+After the launch, the services will be available at url:
+- Portainer http://portainer.localhost
+- Traefik http://traefik.localhost
+- Mailhog http://mail.localhost
+
 The command needs to be executed only once, containers are started with the option `restart: always`, that is, after restarting the computer, docker will automatically start them.
 
 If you want to stop and remove service containers, run the command:
