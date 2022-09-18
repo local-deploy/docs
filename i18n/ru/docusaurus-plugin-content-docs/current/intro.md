@@ -22,6 +22,10 @@ DL является оберткой поверх Docker и docker-compose, ни
 - Laravel
 - WordPress  
 
+Поддерживаемые SHELL:
+- bash
+- zsh 
+
 Зависимости:
 - docker
 - docker-compose v2

@@ -22,6 +22,10 @@ Supported frameworks and CMS:
 - Laravel
 - WordPress
 
+Supported SHELL:
+- bash
+- zsh
+
 Dependencies:
 - docker
 - docker-compose v2
