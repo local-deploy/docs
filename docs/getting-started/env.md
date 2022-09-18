@@ -88,11 +88,12 @@ If the script could not automatically determine access to the database on the se
 
 ### Other settings
 
-| Variable                | Required | Default value                                  | Note                                                                                                         |
-|-------------------------|----------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| LOCALTIME               | No       | Europe/Moscow                                  | Time zone set in PHP and MySQL containers                                                                    |
-| NGINX_CONF              | No       | ~/.config/dl/config-files/default.conf.template | Nginx config template. Required when using php-fpm version (nginx + php-fpm)                                 |
-| LOCAL_IP                | No       | External local IP<br/>e.g. 192.168.0.5         | If the IP of the computer was incorrectly determined, it must be specified manually in the `.env` file       |
+| Variable             | Required | Default value                                   | Note                                                                                                                        |
+|----------------------|----------|-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| LOCALTIME            | No       | Europe/Moscow                                   | Time zone set in PHP and MySQL containers                                                                                   |
+| NGINX_CONF           | No       | ~/.config/dl/config-files/default.conf.template | Nginx config template. Required when using php-fpm version (nginx + php-fpm)                                                |
+| LOCAL_IP             | No       | External local IP<br/>e.g. 192.168.0.5          | If the IP of the computer was incorrectly determined, it must be specified manually in the `.env` file                      |
+| APPEND_COMPOSE_FILE  | No       |                                                 | Add a docker-compose.yaml file to be run with the project. (If there are several files, they must be separated by a colon)  |
 
 ## File configuration example for Bitrix CMS
 
