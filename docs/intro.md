@@ -24,7 +24,7 @@ Supported frameworks and CMS:
 
 Dependencies:
 - docker
-- docker-compose
+- docker-compose v2
 
 The docker compose (as plugin) supported
 

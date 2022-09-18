@@ -24,7 +24,7 @@ DL является оберткой поверх Docker и docker-compose, ни
 
 Зависимости:
 - docker
-- docker-compose
+- docker-compose v2
 
 Поддерживается docker compose (как плагин)
 
