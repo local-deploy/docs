@@ -63,7 +63,7 @@ If the script could not automatically determine access to the database on the se
 | PHP_UPLOAD_MAX_FILESIZE | No       | 100M          | Maximum file size allowed for upload                                                                                                  |
 | PHP_MAX_FILE_UPLOADS    | No       | 50            | Maximum number of uploaded files                                                                                                      |
 | PHP_MAX_EXECUTION_TIME  | No       | 60            | Maximum script execution time                                                                                                         |
-| PHP_MODULES             | No       |               | Additional php extensions. For example PHP_MODULES="redis,memcached"                                                                  |
+| PHP_MODULES             | No       |               | Additional php extensions. For example PHP_MODULES="redis memcached"                                                                  |
 | XDEBUG                  | No       | off [^4]      | To enable the XDebug module, use the `debug` option                                                                                   |
 | XDEBUG_IDE_KEY          | No       | PHPSTORM      | Key to be passed when initializing an XDebug session                                                                                  |
 | XDEBUG_PORT             | No       | 9003          | XDebug port                                                                                                                           |
