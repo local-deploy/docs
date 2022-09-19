@@ -63,7 +63,7 @@ DL использует конфигурационные файлы docker-compo
 | PHP_UPLOAD_MAX_FILESIZE | Нет          | 100M                  | Максимальный размер файла, разрешенный для загрузки                                                                                    |
 | PHP_MAX_FILE_UPLOADS    | Нет          | 50                    | Максимальное количество загружаемых файлов                                                                                             |
 | PHP_MAX_EXECUTION_TIME  | Нет          | 60                    | Максимальное время выполнения скрипта                                                                                                  |
-| PHP_MODULES             | Нет          |                       | Дополнительные php расширения. Например, PHP_MODULES="redis,memcached"                                                                 |
+| PHP_MODULES             | Нет          |                       | Дополнительные php расширения. Например, PHP_MODULES="redis memcached"                                                                 |
 | XDEBUG                  | Нет          | off [^4]              | Для включения модуля XDebug, используйте параметр `debug`                                                                              |
 | XDEBUG_IDE_KEY          | Нет          | PHPSTORM              | Ключ, который должен быть передан при инициализации сессии XDebug                                                                      |
 | XDEBUG_PORT             | Нет          | 9003                  | Порт XDebug                                                                                                                            |
