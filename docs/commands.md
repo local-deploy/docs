@@ -218,6 +218,25 @@ dl self-update
 dl self-update -n
 ```
 
+## ps
+
+List of project containers.
+
+The command is similar to `docker ps`, but only the containers started by the current project are displayed.
+
+Usage example:
+
+```bash
+dl ps
+```
+
+Output example:
+
+| ID           | Name         | State   | IP         | Ports    |
+|--------------|--------------|---------|------------|----------|
+| aa2b362ea773 | site.com_php | running | 172.25.0.3 | 80/tcp   |  
+| bbe79a746fe0 | site.com_db  | running | 172.25.0.2 | 3306/tcp |
+
 ## version
 
 Display the current version.
