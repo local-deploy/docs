@@ -14,6 +14,38 @@ Usage example:
 dl
 ```
 
+## completion
+
+Displays instructions for enabling auto-completion in the console.
+
+Usage example:
+
+```bash
+dl completion [bash|zsh]
+```
+
+## config
+
+Application settings.
+
+Usage example:
+
+```bash
+dl config
+```
+
+## config repo
+
+Menu for setting up the images source repository.
+
+The default is the GitHub repository (ghcr.io). If you have problems downloading images, you can switch the source to the RedHat mirror (quay.io)
+
+Usage example:
+
+```bash
+dl config repo
+```
+
 ## env
 
 Create or replace the `.env` file. If a `.env.example` file exists in the root of the project, it will be used instead of the default file.
