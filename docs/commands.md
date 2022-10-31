@@ -119,6 +119,9 @@ dl recreate
 
 Login to PHP container as www-data or root and start bash shell.
 
+As the second parameter, you can specify the name or ID of another docker container.
+Default is always the PHP container.
+
 Available options:
 
 - `-r, --root` enter the container as root
@@ -128,6 +131,8 @@ Usage example:
 ```bash
 dl bash
 dl bash -r
+dl bash site.com_db
+dl bash fcb13f1a3ea7
 ```
 
 ## service
