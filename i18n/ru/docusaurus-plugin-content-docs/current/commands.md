@@ -135,6 +135,17 @@ dl bash site.com_db
 dl bash fcb13f1a3ea7
 ```
 
+## exec
+
+Запуск команды bash в контейнере PHP от имени пользователя www-data
+
+Пример использования:
+
+```bash
+dl exec composer install
+dl exec "ls -la"
+```
+
 ## service
 
 Управление служебными контейнерами (portainer, mailcatcher, traefik).

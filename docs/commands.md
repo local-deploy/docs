@@ -135,6 +135,17 @@ dl bash site.com_db
 dl bash fcb13f1a3ea7
 ```
 
+## exec
+
+Running bash command in PHP container as user www-data
+
+Usage example:
+
+```bash
+dl exec composer install
+dl exec "ls -la"
+```
+
 ## service
 
 Management of service containers (portainer, mailcatcher, traefik).
