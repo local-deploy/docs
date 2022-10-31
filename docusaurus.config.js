@@ -102,6 +102,13 @@ const config = {
                 id:         'ru',
             },
         ],
+        [
+            'docusaurus-plugin-yandex-metrica',
+            {
+                counterID: '90991055',
+                webvisor: true,
+            },
+        ],
     ],
 };
 
