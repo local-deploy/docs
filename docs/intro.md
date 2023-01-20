@@ -33,7 +33,7 @@ Dependencies:
 The docker compose (as plugin) supported
 
 ## Features
-- Support for PHP versions (apache and php-fpm) 7.3, 7.4, 8.0, 8.1
+- Support for PHP versions (apache and php-fpm) 7.3, 7.4, 8.0, 8.1, 8.2
 - Support for MySQL versions 5.7, 8.0
 - Downloading the database and files from the production server
 - Redis
