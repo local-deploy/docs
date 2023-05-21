@@ -13,7 +13,7 @@ DL использует конфигурационные файлы docker-compo
 - [MySQL](https://hub.docker.com/r/alterway/mysql) (alterway/mysql)
 - [Memcached](https://hub.docker.com/_/memcached)
 - [Nginx](https://hub.docker.com/_/nginx) (версия alpine)
-- [php-fpm и apache2](https://ghcr.io/organization/local-deploy) (модифицированные оригинальные образы)
+- [php-fpm и apache2](https://github.com/orgs/local-deploy/repositories) (модифицированные оригинальные образы)
 
 ## Настройка .env файла
 

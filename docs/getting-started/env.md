@@ -13,7 +13,7 @@ Used images:
 - [MySQL](https://hub.docker.com/r/alterway/mysql) (alterway/mysql)
 - [Memcached](https://hub.docker.com/_/memcached)
 - [Nginx](https://hub.docker.com/_/nginx) (alpine version)
-- [php-fpm and apache2](https://ghcr.io/organization/local-deploy) (modified original images)
+- [php-fpm and apache2](https://github.com/orgs/local-deploy/repositories) (modified original images)
 
 ## Setting up the .env file
 
@@ -29,17 +29,17 @@ With the help of variables in the `.env` file, you can flexibly control the envi
 
 ### Deploy files and database
 
-| Variable           | Required | Default value | Note                                                                                                  |
-|--------------------|----------|---------------|-------------------------------------------------------------------------------------------------------|
-| CATALOG_SRV        | No [^3]  |               | The root directory of the site on the server                                                          |
-| USER_SRV           | No [^3]  |               | SSH username to connect to the server                                                                 |
-| PORT_SRV           | No [^3]  |               | SSH port to connect to the server                                                                     |
-| SERVER             | No [^3]  |               | IP address (or domain) to connect to the server                                                       |
-| SSH_KEY            | No [^3]  | id_rsa        | Specifies the name of the ssh key located in the `~/.ssh/` directory                                  |
-| ASK_KEY_PASSPHRASE | No       | false         | Ask for private key passphrase. <br/>Available values: `true`, `false`                                |
+| Variable           | Required | Default value | Note                                                                               |
+|--------------------|----------|---------------|------------------------------------------------------------------------------------|
+| CATALOG_SRV        | No [^3]  |               | The root directory of the site on the server                                       |
+| USER_SRV           | No [^3]  |               | SSH username to connect to the server                                              |
+| PORT_SRV           | No [^3]  |               | SSH port to connect to the server                                                  |
+| SERVER             | No [^3]  |               | IP address (or domain) to connect to the server                                    |
+| SSH_KEY            | No [^3]  | id_rsa        | Specifies the name of the ssh key located in the `~/.ssh/` directory               |
+| ASK_KEY_PASSPHRASE | No       | false         | Ask for private key passphrase. <br/>Available values: `true`, `false`             |
 | USE_SSH_PASS       | No       | false         | Ignore ssh key and use password to connect. <br/>Available values: `true`, `false` |
-| EXCLUDED_TABLES    | No       |               | MySQL tables excluded when downloading a dump from the server                                         |
-| EXCLUDED_FILES     | No       |               | Excluded files when downloading an archive of files from the server                                   |
+| EXCLUDED_TABLES    | No       |               | MySQL tables excluded when downloading a dump from the server                      |
+| EXCLUDED_FILES     | No       |               | Excluded files when downloading an archive of files from the server                |
 
 ### Database connection
 
