@@ -21,6 +21,7 @@ Displays instructions for enabling auto-completion in the console.
 Usage example:
 
 ```bash
+dl completion
 dl completion [bash|zsh]
 ```
 
@@ -223,6 +224,10 @@ dl service restart
 
 Downloading the latest stable dl release from the repository and updating the application version.
 
+> The command is available only when installed in the user's home directory.  
+> When installing a deb package, dl is updated via apt:  
+> `sudo apt update && sudo apt install dl`
+
 Available options:
 
 - `-n, --no-overwrite` do not overwrite config files
@@ -252,6 +257,17 @@ Output example:
 |--------------|--------------|---------|------------|----------|
 | aa2b362ea773 | site.com_php | running | 172.25.0.3 | 80/tcp   |  
 | bbe79a746fe0 | site.com_db  | running | 172.25.0.2 | 3306/tcp |
+
+## templates
+
+Restoring the original docker-compose files in the configuration directory.
+> The command will not work on Linux systems when installed via apt-manager.
+
+Usage example:
+
+```bash
+dl templates
+```
 
 ## version
 
