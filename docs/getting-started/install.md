@@ -6,6 +6,8 @@ sidebar_position: 1
 
 The installation process is reduced to copying the executable file to the user's `bin` directory or to the system `/usr/bin` directory.
 
+Choose the installation method that suits you:
+
 - [Installing the deb-package](#installing-the-deb-package)
 - [Installation in the user's home directory](#installation-in-the-users-home-directory)
 - [Manual installation](#manual-installation)
