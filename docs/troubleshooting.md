@@ -25,4 +25,24 @@ The problem is solved by the additional parameter `--column-statistics=0`, which
 
 > The full command that dl executes on the server can be seen in debug mode.
 
+## Error determining hash in known_hosts
+Sometimes you may get an error when running the `dl deploy` command:
 
+```text
+ssh: handshake failed: knownhosts: key mismatch
+```
+
+The error notifies that the server key is present in the `~/.ssh/known_hosts` file, but the hash on the server name does not match the one specified in your `SERVER` variable.
+
+For example, when accessing the server via ssh, you specify the domain (`ssh user@site.com`), and in the `.env` file, in the `SERVER` variable, you specify the IP address. In this case, the SSH client sees the same key in the `~/.ssh/known_hosts` file, but with a completely different domain hash.
+
+Try to access the server via ssh manually, with the same access that you specified in the `.env` file, the system should give an error and prompt you to delete the extra line.
+
+The cardinal solution to the problem, if all else fails: delete the `~/.ssh/known_hosts` file.
+
+## Known Issues
+
+### Safari
+On MacOS, Safari does not recognize the `.localhost` domain
+
+You can use the `.nip.io` domain to open the project. Other browsers don't have this problem.
