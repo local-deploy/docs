@@ -42,7 +42,7 @@ The docker compose (as plugin) supported
 - Cross-platform
 - Interception of mail sent via php
 - Portainer - docker container management system
-- Does not require root access
+- Does not require root access (when installing the executable file in the user's directory)
 - Accessing sites from the browser via `.localhost` or` .nip.io`
 - Ability to add custom docker-compose.yaml files to DL configuration
 
