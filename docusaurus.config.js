@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/oceanicNext');
 const config = {
     title:                 'Deploy Local',
     tagline:               'Site deployment assistant locally',
-    url:                   'https://dl.varme.pw',
+    url:                   'https://local-deploy.github.io',
     baseUrl:               '/',
     onBrokenLinks:         'throw',
     onBrokenMarkdownLinks: 'warn',
