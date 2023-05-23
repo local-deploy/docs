@@ -74,13 +74,16 @@ Available options:
 - `-d, --database` dump only the database from the server
 - `-f, --files` only download files from server
 - `-o, --override` override boot directories (comma separated values)
+- `-t, --tables` dump only specified tables (comma separated values)
 
 Usage example:
 
 ```bash
 dl deploy
 dl deploy -d
-dl deploy -f -o bitrix, upload
+dl deploy -d -t b_user,b_file
+dl deploy -f
+dl deploy -f -o bitrix,upload
 ```
 
 ## up
