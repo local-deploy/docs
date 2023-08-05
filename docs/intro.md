@@ -9,7 +9,7 @@ Deploy Local — is a command line interface designed to help developers quickly
 DL is a wrapper on top of Docker and docker-compose, no additional software or libraries are required to install.
 
 Supported OS:
-- Linux (debian, ubuntu, linux mint, etc)
+- Linux (debian, ubuntu, linux mint, arch linux, manjaro, etc)
 - macOS (beta)
 [//]: # (- Windows &#40;via WSL2&#41;)
 

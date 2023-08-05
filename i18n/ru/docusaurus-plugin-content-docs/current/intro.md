@@ -9,7 +9,7 @@ Deploy Local — это интерфейс командной строки, ра
 DL является оберткой поверх Docker и docker-compose, никакое дополнительное программное обеспечение или библиотеки устанавливать не требуется.
 
 Поддерживаемые ОС:
-- Linux (debian, ubuntu, linux mint, etc)
+- Linux (debian, ubuntu, linux mint, arch linux, manjaro, etc)
 - macOS (beta)
 - Windows (через WSL2)
 
