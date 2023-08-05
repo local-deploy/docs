@@ -46,3 +46,7 @@ ssh: handshake failed: knownhosts: key mismatch
 В операционной системе MacOS браузер Safari не распознает домен `.localhost`  
 
 Вы можете использовать домен `.nip.io`, чтобы открыть проект. В других браузерах подобной проблемы не наблюдается.
+
+### Docker Desktop
+На некоторых дистрибутивах Linux может наблюдаться проблема с сервисными контейнерами, если Docker установлен версии Desktop. На текущий момент решения проблемы нет. Единственный выход — удалить Desktop и установить версию Engine.  
+[Install Docker Engine](https://docs.docker.com/engine/install)

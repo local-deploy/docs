@@ -46,3 +46,7 @@ The cardinal solution to the problem, if all else fails: delete the `~/.ssh/know
 On MacOS, Safari does not recognize the `.localhost` domain
 
 You can use the `.nip.io` domain to open the project. Other browsers don't have this problem.
+
+### Docker Desktop
+On some Linux distributions, there may be an issue with service containers if Docker is installed on the Desktop edition. Now there is no solution to the problem. The only way out is to uninstall Desktop and install the Engine version.  
+[Install Docker Engine](https://docs.docker.com/engine/install)
