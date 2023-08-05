@@ -47,6 +47,40 @@ Usage example:
 dl config repo
 ```
 
+## cert
+
+Generating and (un)installing a root certificate in Firefox and/or Chrome/Chromium browsers.
+
+The command only needs to be run once. It will generate a CA certificate and use the **certutil** utility to write it to the browser's storage.
+
+The certificate `rootCA.pem` (and the key `rootCA-key.pem`) will be located in the directory:  
+`~/.config/dl/certs`.
+
+After installing the root certificate, the project will be available in the browser via the https protocol.
+
+:::note
+This command uses the `certutil` utility, which must be installed on the computer.
+
+Installation for some OS:
+- Debian/Ubuntu/Mint: `sudo apt install libnss3-tools`
+- Arch Linux/Manjaro: `pacman -S nss`
+- Fedora: `dnf install nss-tools`
+- macOS: `brew install nss`
+
+> In the deb-packages, certutil is listed as a dependency.
+:::
+
+:::note
+On some operating systems, **certutil** may require the root password to install the certificate in the browser's store.
+:::
+
+Usage example:
+
+```bash
+dl cert install
+dl cert uninstall
+```
+
 ## env
 
 Create or replace the `.env` file. If a `.env.example` file exists in the root of the project, it will be used instead of the default file.
