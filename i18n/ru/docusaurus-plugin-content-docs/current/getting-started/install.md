@@ -41,14 +41,13 @@ cd ~ && rm -rf .local/bin/dl .config/dl
 
     ```bash
     sudo apt update
-    sudo apt install ca-certificates curl gnupg
+    sudo apt install ca-certificates gnupg
     ```
 2. Добавьте официальный GPG ключ:
 
     ```bash
     sudo install -m 0755 -d /etc/apt/keyrings
-    curl -fsSL https://apt.fury.io/local-deploy/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/dl.gpg
-    sudo chmod a+r /etc/apt/keyrings/dl.gpg
+    wget -qO - https://apt.fury.io/local-deploy/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/dl.gpg > /dev/null
     ```
 3. Используйте следующую команду для настройки репозитория:
 

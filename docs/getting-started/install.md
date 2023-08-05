@@ -45,8 +45,7 @@ Before you install DL for the first time on a new machine, you need to set up th
 
     ```bash
     sudo install -m 0755 -d /etc/apt/keyrings
-    curl -fsSL https://apt.fury.io/local-deploy/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/dl.gpg
-    sudo chmod a+r /etc/apt/keyrings/dl.gpg
+    wget -qO - https://apt.fury.io/local-deploy/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/dl.gpg > /dev/null
     ```
 3. Use the following command to set up the repository:
 
