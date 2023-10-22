@@ -6,5 +6,9 @@
   "sidebar.tutorialSidebar.category.Getting Started": {
     "message": "Начало",
     "description": "The label for category Getting Started in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Examples Config": {
+    "message": "Примеры конфигураций",
+    "description": "The label for category Examples Config in sidebar tutorialSidebar"
   }
 }
