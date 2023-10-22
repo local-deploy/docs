@@ -380,6 +380,10 @@
     color: #c96198;
 }
 
-.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module {
+.iconExternalLink {
+    display: none;
+}
+
+.navbar__item > svg:first-child {
     display: none;
 }
