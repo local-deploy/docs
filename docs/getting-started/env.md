@@ -10,7 +10,9 @@ The DL uses docker-compose configuration files, so you can override any variable
 Used images:
 
 - [Redis](https://hub.docker.com/_/redis) (alpine version)
-- [MySQL](https://hub.docker.com/r/alterway/mysql) (alterway/mysql)
+- [MySQL](https://hub.docker.com/_/mysql)
+- [MariaDB](https://hub.docker.com/_/mariadb)
+- [PostgreSQL](https://hub.docker.com/_/postgres)
 - [Memcached](https://hub.docker.com/_/memcached)
 - [Nginx](https://hub.docker.com/_/nginx) (alpine version)
 - [php-fpm and apache2](https://github.com/orgs/local-deploy/repositories) (modified original images)
@@ -21,11 +23,11 @@ With the help of variables in the `.env` file, you can flexibly control the envi
 
 ### Main
 
-| Variable                | Required | Default value                                  | Note                                                                                                         |
-|-------------------------|----------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| NETWORK_NAME            | Yes      | Generated from HOST_NAME                       | The name of the docker network. Generated from HOST_NAME without special characters                          |
-| DOCUMENT_ROOT           | Yes      | /var/www/html                                  | The root directory of the site where the `index.php` file is located. [^1]                                   |
-| HOST_NAME               | No       | Generated from name of the current directory   | Site name or domain. Used to build a local URL [^2]                                                          |
+| Variable      | Required | Default value                                | Note                                                                                |
+|---------------|----------|----------------------------------------------|-------------------------------------------------------------------------------------|
+| NETWORK_NAME  | No       | Generated from HOST_NAME                     | The name of the docker network. Generated from HOST_NAME without special characters |
+| DOCUMENT_ROOT | No       | /var/www/html                                | The root directory of the site where the `index.php` file is located. [^1]          |
+| HOST_NAME     | No       | Generated from name of the current directory | Site name or domain. Used to build a local URL [^2]                                 |
 
 ### Deploy files and database
 
@@ -45,13 +47,13 @@ With the help of variables in the `.env` file, you can flexibly control the envi
 
 If the script could not automatically determine access to the database on the server, write the settings to the env file manually
 
-| Variable           | Required  | Default value    | Note           |
-|--------------------|-----------|------------------|----------------|
-| MYSQL_HOST_SRV     | Нет       | localhost        | Host           |
-| MYSQL_PORT_SRV     | Нет       | 3306             | Port           |
-| MYSQL_DATABASE_SRV | Да        |                  | Base name      |
-| MYSQL_LOGIN_SRV    | Да        |                  | User name      |
-| MYSQL_PASSWORD_SRV | Да        |                  | User password  |
+| Variable           | Required | Default value | Note          |
+|--------------------|----------|---------------|---------------|
+| MYSQL_HOST_SRV     | No       | localhost     | Host          |
+| MYSQL_PORT_SRV     | No       | 3306          | Port          |
+| MYSQL_DATABASE_SRV | Yes      |               | Base name     |
+| MYSQL_LOGIN_SRV    | Yes      |               | User name     |
+| MYSQL_PASSWORD_SRV | Yes      |               | User password |
 
 ### PHP settings
 
@@ -67,16 +69,21 @@ If the script could not automatically determine access to the database on the se
 | XDEBUG                  | No       | off [^4]      | To enable the XDebug module, use the `debug` option                                                                                                            |
 | XDEBUG_IDE_KEY          | No       | PHPSTORM      | Key to be passed when initializing an XDebug session                                                                                                           |
 | XDEBUG_PORT             | No       | 9003          | XDebug port                                                                                                                                                    |
+| PHP_INI_SOURCE          | No       | /dev/null     | Relative link to php.ini file to completely override configuration <br/>(for example: `PHP_INI_SOURCE: .docker/php/php.ini`)                                   |
 
-### MySQL settings
+### DB settings
 
-| Variable                | Required | Default value                                  | Note                                                                                                         |
-|-------------------------|----------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| MYSQL_VERSION           | No       |                                                | MySQL version. <br/>Available values: `5.7`, `8.0`                                                           |
-| MYSQL_DATABASE          | No       | db                                             | MySQL database name                                                                                          |
-| MYSQL_USER              | No       | db                                             | MySQL database username                                                                                      |
-| MYSQL_PASSWORD          | No       | db                                             | MySQL database user password                                                                                 |
-| MYSQL_ROOT_PASSWORD     | No       | root                                           | MySQL database root password                                                                                 |
+If a value is specified, the database container will be raised.
+
+Database name: `db`  
+Username: `db`  
+User password: `db`
+
+| Variable         | Required | Default value | Note                                                                                           |
+|------------------|----------|---------------|------------------------------------------------------------------------------------------------|
+| MYSQL_VERSION    | No       |               | MySQL version. <br/>Available values: `5.7`, `8.0`                                             |
+| MARIADB_VERSION  | No       |               | MariaDB version. <br/>Available values: [Supported tags](https://hub.docker.com/_/mariadb)     |
+| POSTGRES_VERSION | No       |               | PostgreSQL version. <br/>Available values: [Supported tags](https://hub.docker.com/_/postgres) |
 
 ### Additional containers
 
@@ -108,9 +115,9 @@ SERVER=127.0.0.1
 HOST_NAME=site.com
 DOCUMENT_ROOT=/var/www/html
 ## Avalible versions: 7.3-apache 7.4-apache 8.0-apache 8.1-apache 8.2-apache 7.3-fpm 7.4-fpm 8.0-fpm 8.1-fpm 8.2-fpm ##
-PHP_VERSION=7.3-apache
+PHP_VERSION=8.2-apache
 ## Avalible versions: 5.7 8.0 ##
-MYSQL_VERSION=5.7
+MYSQL_VERSION=8.0
 
 ## Deploy settings ##
 EXCLUDED_TABLES=b_event_log,b_search_content_stem,b_search_content,b_search_content_text,b_search_content_title,b_search_phrase,b_search_suggest,b_perf_error

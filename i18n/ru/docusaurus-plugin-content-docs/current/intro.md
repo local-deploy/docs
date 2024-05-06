@@ -20,7 +20,8 @@ DL является оберткой поверх Docker и docker-compose, ни
 Поддерживаемые фреймворки и CMS:
 - Bitrix
 - Laravel
-- WordPress  
+- WordPress
+- И многие другие с ручной установкой параметров
 
 Поддерживаемые SHELL:
 - bash
@@ -33,8 +34,8 @@ DL является оберткой поверх Docker и docker-compose, ни
 Поддерживается docker compose (как плагин)
 
 ## Особенности
-- Поддержка версий PHP (apache и php-fpm) 7.3, 7.4, 8.0, 8.1, 8.2
-- Поддержка MySQL версий 5.7, 8.0
+- Поддержка версий PHP (apache и php-fpm) 7.3, 7.4, 8.0, 8.1, 8.2, 8.3
+- Поддержка MySQL, MariaDB и PostgreSQL
 - Скачивание базы данных и файлов с production-сервера
 - Redis
 - Memcached

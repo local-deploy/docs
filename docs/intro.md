@@ -11,7 +11,7 @@ DL is a wrapper on top of Docker and docker-compose, no additional software or l
 Supported OS:
 - Linux (debian, ubuntu, linux mint, arch linux, manjaro, etc)
 - macOS (beta)
-[//]: # (- Windows &#40;via WSL2&#41;)
+- Windows (via WSL2)
 
 Supported architectures:
 - x64
@@ -21,6 +21,7 @@ Supported frameworks and CMS:
 - Bitrix
 - Laravel
 - WordPress
+- And many others with manual settings
 
 Supported SHELL:
 - bash
@@ -33,8 +34,8 @@ Dependencies:
 The docker compose (as plugin) supported
 
 ## Features
-- Support for PHP versions (apache and php-fpm) 7.3, 7.4, 8.0, 8.1, 8.2
-- Support for MySQL versions 5.7, 8.0
+- Support for PHP versions (apache and php-fpm) 7.3, 7.4, 8.0, 8.1, 8.2, 8.3
+- Support for MySQL, MariaDB and PostgreSQL
 - Downloading the database and files from the production server
 - Redis
 - Memcached

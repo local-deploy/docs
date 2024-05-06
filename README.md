@@ -1,4 +1,4 @@
 # docs
 
-Node v16.9.1
-Yarn 1.22.17
+Node v18.18.2
+Yarn 1.22.19
