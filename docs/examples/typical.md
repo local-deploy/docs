@@ -38,7 +38,7 @@ After downloading:
 CATALOG_SRV=/var/www/user/site.com/public_html/ # Root directory of the site on the server
 USER_SRV=user # SSH username to connect to the server
 PORT_SRV=22 # SSH port for connecting to the server
-SERVER=127.0.0.1 # SSH port for connecting to the server
+SERVER=127.0.0.1 # SSH server
 
 PHP_VERSION=8.2-apache # Container with PHP (if php-fpm is specified, the nginx container will also start)
 MYSQL_VERSION=8.0 # Container with MySQL
@@ -76,7 +76,7 @@ After downloading:
 CATALOG_SRV=/var/www/user/site.com/public_html/ # Root directory of the site on the server
 USER_SRV=user # SSH username to connect to the server
 PORT_SRV=22 # SSH port for connecting to the server
-SERVER=127.0.0.1 # SSH port for connecting to the server
+SERVER=127.0.0.1 # SSH server
 
 PHP_VERSION=8.2-apache # Container with PHP (if php-fpm is specified, the nginx container will also start)
 MYSQL_VERSION=8.0 # Container with MySQL
@@ -116,7 +116,7 @@ During deployment, only the database is downloaded. Accesses are determined from
 CATALOG_SRV=/var/www/user/site.com/public_html/ # Root directory of the site on the server
 USER_SRV=user # SSH username to connect to the server
 PORT_SRV=22 # SSH port for connecting to the server
-SERVER=127.0.0.1 # SSH port for connecting to the server
+SERVER=127.0.0.1 # SSH server
 
 DOCUMENT_ROOT=/var/www/html/public # Set DOCUMENT_ROOT to the public directory
 PHP_VERSION=8.2-apache # Container with PHP (if php-fpm is specified, the nginx container will also start)

@@ -38,7 +38,7 @@ sidebar_label: Типовая конфигурация
 CATALOG_SRV=/var/www/user/site.com/public_html/ # Корневая директория сайта на сервере
 USER_SRV=user # Имя пользователя SSH для подключения к серверу
 PORT_SRV=22 # Порт SSH для подключения к серверу
-SERVER=127.0.0.1 # Порт SSH для подключения к серверу
+SERVER=127.0.0.1 # Сервер SSH
 
 PHP_VERSION=8.2-apache # Контейнер с PHP (если указан php-fpm, запустится также контейнер nginx)
 MYSQL_VERSION=8.0 # Контейнер с MySQL
@@ -76,7 +76,7 @@ EXCLUDED_FILES=bitrix/backup,bitrix/cache,bitrix/managed_cache,bitrix/stack_cach
 CATALOG_SRV=/var/www/user/site.com/public_html/ # Корневая директория сайта на сервере
 USER_SRV=user # Имя пользователя SSH для подключения к серверу
 PORT_SRV=22 # Порт SSH для подключения к серверу
-SERVER=127.0.0.1 # Порт SSH для подключения к серверу
+SERVER=127.0.0.1 # Сервер SSH
 
 PHP_VERSION=8.2-apache # Контейнер с PHP (если указан php-fpm, запустится также контейнер nginx)
 MYSQL_VERSION=8.0 # Контейнер с MySQL
@@ -116,7 +116,7 @@ define('WP_SITEURL', 'http://site.com.localhost');
 CATALOG_SRV=/var/www/user/site.com/public_html/ # Корневая директория сайта на сервере
 USER_SRV=user # Имя пользователя SSH для подключения к серверу
 PORT_SRV=22 # Порт SSH для подключения к серверу
-SERVER=127.0.0.1 # Порт SSH для подключения к серверу
+SERVER=127.0.0.1 # Сервер SSH
 
 DOCUMENT_ROOT=/var/www/html/public # Устанавливается DOCUMENT_ROOT на директорию public
 PHP_VERSION=8.2-apache # Контейнер с PHP (если указан php-fpm, запустится также контейнер nginx)
