@@ -47,6 +47,22 @@ dl config
 dl config repo
 ```
 
+## config service
+
+Меню управления запуском дополнительных контейнеров.
+
+По умолчанию запускаются сервисные контейнеры traefik, portainer и mail (mailcatcher). Вы можете отключить запуск не нужных вам контейнеров.
+
+:::note
+Отключить можно только portainer и mail. Контейнер traefik не может быть отключен.
+:::
+
+Пример использования:
+
+```bash
+dl config service
+```
+
 ## cert
 
 Создание и удаление корневого самоподписанного сертификата в браузерах Firefox и/или Chrome/Chromium.
@@ -202,7 +218,7 @@ dl service
 Доступные опции:
 
 - `-r, --restart` перезапустить запущенные контейнеры
-- `-s, --service` запустить один контейнер
+- `-s, --service` запустить указанные контейнеры (значения, разделенные запятыми)
 
 Пример использования:
 
@@ -210,6 +226,7 @@ dl service
 dl service up
 dl service up -r
 dl service up -s portainer
+dl service up -s portainer,mail
 ```
 
 ### service down
@@ -220,14 +237,14 @@ dl service up -s portainer
 Доступные опции:
 
 - `-r, --restart` перезапустить запущенные контейнеры
-- `-s, --service` запустить один контейнер
+- `-s, --service` остановить указанные контейнеры (значения, разделенные запятыми)
 
 Пример использования:
 
 ```bash
 dl service down
 dl service down -r
-dl service down -s portainer
+dl service down -s portainer,mail
 ```
 
 ### service recreate
@@ -237,13 +254,14 @@ dl service down -s portainer
 
 Доступные опции:
 
-- `-s, --service` перезапустить один контейнер
+- `-s, --service` перезапустить указанные контейнеры (значения, разделенные запятыми)
 
 Пример использования:
 
 ```bash
 dl service recreate
 dl service recreate -s portainer
+dl service recreate -s portainer,mail
 ```
 
 ### service restart
@@ -298,7 +316,6 @@ dl ps
 ## templates
 
 Восстановление исходных файлов docker-compose в каталоге конфигурации.
-> Команда не будет работать в системах Linux при установке через apt-manager.
 
 Пример использования:
 

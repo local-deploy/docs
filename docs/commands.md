@@ -47,6 +47,22 @@ Usage example:
 dl config repo
 ```
 
+## config service
+
+Menu for managing the launch of additional containers.
+
+By default, the service containers traefik, portainer and mail (mailcatcher) are launched. You can disable the launch of containers you don't need.
+
+:::note
+You can only disable portainer and mail. The traefik container cannot be disabled.
+:::
+
+Usage example:
+
+```bash
+dl config service
+```
+
 ## cert
 
 Generating and (un)installing a root certificate in Firefox and/or Chrome/Chromium browsers.
@@ -202,7 +218,7 @@ Valid parameters for the --service flag: `portainer`,` mail`, `traefik`
 Available options:
 
 - `-r, --restart` restart running containers
-- `-s, --service` start one container
+- `-s, --service` run the specified containers (comma separated values)
 
 Usage example:
 
@@ -210,6 +226,7 @@ Usage example:
 dl service up
 dl service up -r
 dl service up -s portainer
+dl service up -s portainer,mail
 ```
 
 ### service down
@@ -220,7 +237,7 @@ Valid parameters for the --service flag: `portainer`,` mail`, `traefik`
 Available options:
 
 - `-r, --restart` restart running containers
-- `-s, --service` start one container
+- `-s, --service` stop the specified containers (comma separated values)
 
 Usage example:
 
@@ -228,6 +245,7 @@ Usage example:
 dl service down
 dl service down -r
 dl service down -s portainer
+dl service down -s portainer,mail
 ```
 
 ### service recreate
@@ -237,13 +255,14 @@ Valid parameters for the --service flag: `portainer`,` mail`, `traefik`
 
 Available options:
 
-- `-s, --service` restart one container
+- `-s, --service` restart the specified containers (comma separated values)
 
 Usage example:
 
 ```bash
 dl service recreate
 dl service recreate -s portainer
+dl service recreate -s portainer,mail
 ```
 
 ### service restart
@@ -298,7 +317,6 @@ Output example:
 ## templates
 
 Restoring the original docker-compose files in the configuration directory.
-> The command will not work on Linux systems when installed via apt-manager.
 
 Usage example:
 
