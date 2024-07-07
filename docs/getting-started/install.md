@@ -64,8 +64,8 @@ Run the `dl` command to verify that the installation was correct. If an error oc
 ### File locations
 
 - Executable: `/usr/bin/dl`
-- docker-compose files: `/etc/dl/config-files/`
-- Application config file: `~/.config/dl/`
+- docker-compose files: `~/.config/dl/templates`
+- Application config file: `~/.config/dl/config.yaml`
 
 ## Installation in the user's home directory
 
@@ -86,7 +86,7 @@ curl -s https://raw.githubusercontent.com/local-deploy/dl/master/install_dl.sh |
 The script will check dependencies, download and install the latest release.
 
 The executable file `dl` will be written to the user's home directory along the path `~/.local/bin/dl`. If the directory does not exist, it will be created. 
-On first run, docker-compose configuration files will be generated in the directory `~/.config/dl/config-files/`.
+On first run, docker-compose configuration files will be generated in the directory `~/.config/dl/`.
 
 :::info
 During installation, the `PATH` global variable is checked, if the `~/.local/bin/` directory is not specified in it, the script will add the line `PATH="$PATH:$HOME/.local/bin"` to the `.bashrc` (or `.zshrc`) file
@@ -97,8 +97,8 @@ Run the `dl` command to verify that the installation was correct. If an error oc
 ### File locations
 
 - Executable: `~/.local/bin/dl`
-- Application config file: `~/.config/dl/`
-- docker-compose files: `~/.config/dl/config-files/`
+- docker-compose files: `~/.config/dl/templates/`
+- Application config file: `~/.config/dl/config.yaml`
 
 ## Manual installation
 

@@ -66,8 +66,8 @@ cd ~ && rm -rf .local/bin/dl .config/dl
 ### Расположение файлов
 
 - Исполняемый файл: `/usr/bin/dl`
-- Файлы docker-compose: `/etc/dl/config-files/`
-- Конфигурационный файл приложения: `~/.config/dl/`
+- Файлы docker-compose: `~/.config/dl/templates`
+- Конфигурационный файл приложения: `~/.config/dl/config.yaml`
 
 ## Установка в домашнюю директорию пользователя
 
@@ -89,7 +89,7 @@ curl -s https://raw.githubusercontent.com/local-deploy/dl/master/install_dl.sh |
 
 Исполняемый файл `dl` будет записан в домашнюю директорию пользователя по пути `~/.local/bin/dl`. Если директории не
 существует, она будет создана.  
-При первом запуске сгенерируются конфигурационные файлы docker-compose в директории `~/.config/dl/config-files/`.
+При первом запуске сгенерируются конфигурационные файлы docker-compose в директории `~/.config/dl/`.
 
 :::info
 При установке проверяется глобальная переменная `$PATH`, если в ней не будет указана директория `~/.local/bin/`, скрипт
@@ -101,8 +101,8 @@ curl -s https://raw.githubusercontent.com/local-deploy/dl/master/install_dl.sh |
 ### Расположение файлов
 
 - Исполняемый файл: `~/.local/bin/dl`
-- Конфигурационный файл приложения: `~/.config/dl/`
-- Файлы docker-compose: `~/.config/dl/config-files/`
+- Файлы docker-compose: `~/.config/dl/templates`
+- Конфигурационный файл приложения: `~/.config/dl/config.yaml`
 
 ## Ручная установка
 
