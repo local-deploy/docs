@@ -28,6 +28,7 @@ With the help of variables in the `.env` file, you can flexibly control the envi
 | NETWORK_NAME  | No       | Generated from HOST_NAME                     | The name of the docker network. Generated from HOST_NAME without special characters |
 | DOCUMENT_ROOT | No       | /var/www/html                                | The root directory of the site where the `index.php` file is located. [^1]          |
 | HOST_NAME     | No       | Generated from name of the current directory | Site name or domain. Used to build a local URL [^2]                                 |
+| DOMAINS       | No       | Generated from HOST_NAME                     | Project domains, comma separated; each may carry its own document root after `:` [^5] |
 
 ### Deploy files and database
 
@@ -98,9 +99,20 @@ User password: `db`
 | Variable             | Required | Default value                                   | Note                                                                                                                        |
 |----------------------|----------|-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | LOCALTIME            | No       | Europe/Moscow                                   | Time zone set in PHP and MySQL containers                                                                                   |
-| NGINX_CONF           | No       | ~/.config/dl/config-files/default.conf.template | Nginx config template. Required when using php-fpm version (nginx + php-fpm)                                                |
+| NGINX_CONF           | No       | Generated from the project domains              | Your own nginx config template (php-fpm version). When unset, the config is generated from the domain list [^6]             |
 | LOCAL_IP             | No       | External local IP<br/>e.g. 192.168.0.5          | If the IP of the computer was incorrectly determined, it must be specified manually in the `.env` file                      |
 | APPEND_COMPOSE_FILE  | No       |                                                 | Add a docker-compose.yaml file to be run with the project. (If there are several files, they must be separated by a colon)  |
+
+## Environment variables
+
+| Variable      | Default value  | Note                                                                                                                                           |
+|---------------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| DL_CONFIG_DIR | `~/.config/dl` | Overrides the DL configuration directory: `config.yaml`, the unpacked templates, certificates and generated web server configs all move there. |
+
+:::note
+The variable does not switch the services that are already running: the traefik container mounts
+the certificate directory at `dl service up` time and keeps it until the services are restarted.
+:::
 
 ## File configuration example for Bitrix CMS
 
@@ -127,5 +139,7 @@ EXCLUDED_FILES=.git,upload,bitrix/backup,bitrix/cache,bitrix/managed_cache,bitri
 [^1]: For example, for Laravel the value would be `/var/www/html/public`
 [^2]: For example, if you specify `site.com`, the local address will be `site.com.localhost` (or `site.com.127.0.0.1.nip.io`)
 [^3]: Required variable when using the `deploy` command 
-[^4]: All XDebug Options https://xdebug.org/docs/all_settings#mode 
+[^4]: All XDebug Options https://xdebug.org/docs/all_settings#mode
+[^5]: Domains without an explicit path inherit `DOCUMENT_ROOT`. For example, `DOMAINS=omsk, msk, en:/var/www/html/en` gives three domains: `omsk.localhost` and `msk.localhost` on the shared `DOCUMENT_ROOT`, and `en.localhost` on `/var/www/html/en`. The first domain of the list is the main one. When the variable is unset, the project keeps working as before — with the single domain built from `HOST_NAME`
+[^6]: Your own file is mounted as a template and goes through `envsubst`, so `${HOST_NAME}`, `${VIRTUAL_HOST}` and `${DOCUMENT_ROOT}` remain available in it, as before 
 
