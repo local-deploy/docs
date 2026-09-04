@@ -141,6 +141,6 @@ EXCLUDED_FILES=.git,upload,bitrix/backup,bitrix/cache,bitrix/managed_cache,bitri
 [^2]: Например, если задать `site.com`, локальный адрес будет таким: `site.com.localhost` (или `site.com.127.0.0.1.nip.io`)
 [^3]: Обязательная переменная при использовании команды `deploy`
 [^4]: Все параметры XDebug https://xdebug.org/docs/all_settings#mode
-[^5]: Домены без явного пути наследуют `DOCUMENT_ROOT`. Например, `DOMAINS=omsk, msk, en:/var/www/html/en` даст три домена: `omsk.localhost` и `msk.localhost` на общем `DOCUMENT_ROOT`, а `en.localhost` — на `/var/www/html/en`. Первый домен списка считается главным. Если переменная не задана, проект работает как раньше — с единственным доменом из `HOST_NAME`
+[^5]: Домены без явного пути наследуют `DOCUMENT_ROOT`. Например, `DOMAINS=omsk, msk, en:/var/www/html/en` даст три домена: `omsk.localhost` и `msk.localhost` на общем `DOCUMENT_ROOT`, а `en.localhost` — на `/var/www/html/en`. Первый домен списка считается главным. Если переменная не задана, проект работает как раньше — с единственным доменом из `HOST_NAME`. Document root должен оставаться внутри `/var/www/html`: в контейнер монтируется только каталог проекта, а apache запрещает доступ за пределами `/var/www/`
 [^6]: Свой файл монтируется как шаблон и проходит обработку `envsubst` — в нём доступны `${HOST_NAME}`, `${VIRTUAL_HOST}` и `${DOCUMENT_ROOT}`, как и раньше
 

@@ -140,6 +140,6 @@ EXCLUDED_FILES=.git,upload,bitrix/backup,bitrix/cache,bitrix/managed_cache,bitri
 [^2]: For example, if you specify `site.com`, the local address will be `site.com.localhost` (or `site.com.127.0.0.1.nip.io`)
 [^3]: Required variable when using the `deploy` command 
 [^4]: All XDebug Options https://xdebug.org/docs/all_settings#mode
-[^5]: Domains without an explicit path inherit `DOCUMENT_ROOT`. For example, `DOMAINS=omsk, msk, en:/var/www/html/en` gives three domains: `omsk.localhost` and `msk.localhost` on the shared `DOCUMENT_ROOT`, and `en.localhost` on `/var/www/html/en`. The first domain of the list is the main one. When the variable is unset, the project keeps working as before — with the single domain built from `HOST_NAME`
+[^5]: Domains without an explicit path inherit `DOCUMENT_ROOT`. For example, `DOMAINS=omsk, msk, en:/var/www/html/en` gives three domains: `omsk.localhost` and `msk.localhost` on the shared `DOCUMENT_ROOT`, and `en.localhost` on `/var/www/html/en`. The first domain of the list is the main one. When the variable is unset, the project keeps working as before — with the single domain built from `HOST_NAME`. Document roots must stay under `/var/www/html`: only the project directory is mounted into the container, and apache denies access outside `/var/www/`
 [^6]: Your own file is mounted as a template and goes through `envsubst`, so `${HOST_NAME}`, `${VIRTUAL_HOST}` and `${DOCUMENT_ROOT}` remain available in it, as before 
 
